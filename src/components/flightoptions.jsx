@@ -48,33 +48,30 @@ class JourneyOptionsFlying extends React.Component {
 
     return (
       <div style={{ border: '2px solid #3a4b35', margin: '0.2rem' }}>
-      <div>
-      <table
-      className="ui celled striped table"
-      style={{ display: 'flex',  justifyContent:'center', alignItems:'center', textAlign: "center" }}
-      >
-      <tbody>
-      <tr>
-      <td style={{ fontWeight: 'bold', fontSize: 20 }} >{this.Capitalize(this.props.results.mode)}</td>
-      <td>from: {this.props.results.origin} <br></br>to: {this.props.results.destination}</td>
-      <td>Carbon: <br></br><span style={{ fontWeight: 'bold', fontSize: 30, color: 'red' }} >{this.props.results.carbon}</span> kg</td>
-      <td>Distance: {this.props.results.distance} miles</td>
-      <td>This journey is equivalent to <span style={{ fontWeight: 'bold', color: 'red'}}>{this.props.results.barrels_of_oil}</span> barrels of petrol.</td>
-      <td>
-      {isLoggedIn ? (
-        this.state.message !== "" ? (
-          <div role="alert">{this.state.message}</div>
-        ) : (
-          <a onClick={this.saveJourneyToDB} style={{cursor: 'pointer', color: 'blue' }}>Save journey</a>
-        )
-      ) : (
-        <div />
-      )}
-      </td>
-      </tr>
-      </tbody>
-      </table>
-      </div>
+        <div id='flightList'>
+          <table className="ui celled striped table" style={{ display: 'flex',  justifyContent:'center', alignItems:'center', textAlign: "center" }}>
+            <tbody>
+              <tr>
+              <td style={{ fontWeight: 'bold', fontSize: 20 }} >{this.Capitalize(this.props.results.mode)}</td>
+              <td>from: {this.props.results.origin} <br></br>to: {this.props.results.destination}</td>
+              <td>Carbon: <br></br><span style={{ fontWeight: 'bold', fontSize: 30, color: 'red' }} >{this.props.results.carbon}</span> kg</td>
+              <td>Distance: {this.props.results.distance} miles</td>
+              <td>This journey is equivalent to <span style={{ fontWeight: 'bold', color: 'red'}}>{this.props.results.barrels_of_oil}</span> barrels of petrol.</td>
+              <td>
+              {isLoggedIn ? (
+                this.state.message !== "" ? (
+                  <div role="alert">{this.state.message}</div>
+                ) : (
+                  <a onClick={this.saveJourneyToDB} style={{cursor: 'pointer', color: 'blue' }}>Save journey</a>
+                )
+              ) : (
+                <div />
+              )}
+              </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     )
   }

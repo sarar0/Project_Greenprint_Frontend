@@ -14,6 +14,6 @@ context('Window', () => {
   })
 
   it('cy.title() - get the title', () => {
-    cy.title().should('include', 'Project GreenPrint')
+    cy.title().should('include', 'GreenPrint')
   })
 })
