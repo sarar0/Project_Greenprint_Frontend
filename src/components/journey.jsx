@@ -131,7 +131,7 @@ class JourneyForm extends React.Component {
         <h2>Carbon Calculator</h2>
         <div className="box-grouping">
           <h3>Ground Transport</h3>
-          <form onSubmit={this.handleSubmit} className="ui form">
+          <form onSubmit={this.handleSubmit} className="ui form" id="ground">
             <div>
               <label>
                 <span className="bold">From</span>
@@ -162,7 +162,7 @@ class JourneyForm extends React.Component {
           </form>
 
           <h3>Flights</h3>
-          <form onSubmit={this.handleSubmitFlying} className="ui form">
+          <form onSubmit={this.handleSubmitFlying} className="ui form" id="flights">
             <div>
               <label>
                 <span className="bold">Origin Airport</span>

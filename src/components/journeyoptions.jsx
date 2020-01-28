@@ -51,7 +51,7 @@ class JourneyOptions extends React.Component {
 
     return (
       <div className="journey-options">
-        <div>
+        <div id='list'>
           <table
             className="ui celled striped table"
             style={{
